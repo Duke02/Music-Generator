@@ -37,7 +37,7 @@ void NoteLibrary::addNote (Note *note) {
 	// If we can't find the note in our already existing library...
 	if ( this->notes.find( note->getRepresentation() ) == this->notes.end() ) {
 		// Add it.
-		this->notes[ note->getName() ] = note;
+		this->notes[ note->getRepresentation() ] = note;
 	}
 }
 
