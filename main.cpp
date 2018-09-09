@@ -62,11 +62,7 @@ int main ( ) {
 		octave    = n / 12;
 		note_name = getNoteName( n );
 
-		std::cout << "New Note! " << note_name << octave << " " << frequency << std::endl;
-
 		noteLibrary->addNote( note_name, octave, frequency );
-
-		std::cout << noteLibrary->getNote( getNoteRepresentation( n ) )->getRepresentation() << std::endl;
 	}
 
 	noteLibrary->printAll();
