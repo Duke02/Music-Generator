@@ -50,11 +50,14 @@ int main ( ) {
 	std::string note_name;
 	int         octave;
 
+	const int MAX_OCTAVES      = 8;
+	const int MAX_NUM_OF_NOTES = MAX_OCTAVES * 12;
+
 	const double a = std::pow( 2, 1.0 / 12.0 );
 
 	// We want to generate 8 octaves worth of notes.
 	// Thus the 8 * 12. (0th indexing for the 8, 12 for the number of notes)
-	for ( int n = 0; n < 8 * 12; n++ ) {
+	for ( int n = 0; n < MAX_NUM_OF_NOTES; n++ ) {
 		frequency = middle_c->getFrequency() * std::pow( a, ( double ) (n - middle_c_n) );
 		octave    = n / 12;
 		note_name = getNoteName( n );
