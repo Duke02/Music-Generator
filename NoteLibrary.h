@@ -10,7 +10,7 @@
 class NoteLibrary {
 
 private:
-	std::map < std::string, const Note * > notes;
+	std::map < std::string, Note * > notes;
 
 	NoteLibrary ( );
 
@@ -19,11 +19,11 @@ public:
 
 	int getSize ( ) const;
 
-	const Note *getNote (const std::string &note) const;
-	const Note *getMiddleC ( ) const;
+	Note *getNote (const std::string &note) const;
+	Note *getMiddleC ( ) const;
 
 
-	void addNote (const Note *note);
+	void addNote (Note *note);
 	void addNote (const std::string &name, const int &octave, const double &frequency);
 
 

@@ -1,4 +1,5 @@
 
+#include <iostream>
 #include "NoteLibrary.h"
 
 NoteLibrary::NoteLibrary ( ) {
@@ -20,7 +21,7 @@ NoteLibrary *NoteLibrary::getInstance ( ) {
 	return instance;
 }
 
-const Note *NoteLibrary::getNote (const std::string &note) const {
+Note *NoteLibrary::getNote (const std::string &note) const {
 	// If we can find the given note in the thing...
 	if ( this->notes.find( note ) != this->notes.end() ) {
 		// output the note.
@@ -32,7 +33,7 @@ const Note *NoteLibrary::getNote (const std::string &note) const {
 
 }
 
-void NoteLibrary::addNote (const Note *note) {
+void NoteLibrary::addNote (Note *note) {
 	// If we can't find the note in our already existing library...
 	if ( this->notes.find( note->getRepresentation() ) == this->notes.end() ) {
 		// Add it.
@@ -44,7 +45,7 @@ void NoteLibrary::addNote (const std::string &name, const int &octave, const dou
 	this->addNote( new Note( name, octave, frequency ) );
 }
 
-const Note *NoteLibrary::getMiddleC ( ) const {
+Note *NoteLibrary::getMiddleC ( ) const {
 	return this->getNote( "C3" );
 }
 
