@@ -20,6 +20,9 @@ public:
 	double getFrequency ( ) const;
 	int getOctave ( ) const;
 
+	std::string getRepresentation ( ) const;
+	explicit operator std::string ( ) const;
+
 
 };
 

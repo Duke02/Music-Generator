@@ -5,6 +5,7 @@
 #include "Note.h"
 
 Note::Note ( ) {
+	// Middle C
 	this->name      = "C";
 	this->octave    = 3;
 	this->frequency = 261.625565;
@@ -26,6 +27,15 @@ double Note::getFrequency ( ) const {
 
 int Note::getOctave ( ) const {
 	return this->octave;
+}
+
+std::string Note::getRepresentation ( ) const {
+	// Middle C would be "C3"
+	return this->getName() + std::to_string( this->getOctave() );
+}
+
+Note::operator std::string ( ) const {
+	return this->getRepresentation();
 }
 
 
