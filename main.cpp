@@ -66,7 +66,7 @@ int main ( ) {
 
 		noteLibrary->addNote( note_name, octave, frequency );
 
-		std::cout << noteLibrary->getNote( note_name )->getRepresentation() << std::endl;
+		std::cout << noteLibrary->getNote( getNoteRepresentation( n ) )->getRepresentation() << std::endl;
 	}
 
 	noteLibrary->printAll();
