@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
+#include <algorithm>
 #include "NoteLibrary.h"
 
 
@@ -65,12 +66,7 @@ int main ( ) {
 		std::cout << noteLibrary->getNote( note_name )->getRepresentation() << std::endl;
 	}
 
-	Note *temp;
-
-	for ( int i = 0; i < noteLibrary->getSize(); i++ ) {
-		temp = const_cast<Note *>(noteLibrary->getNote( getNoteRepresentation( i ) ));
-		std::cout << temp->getRepresentation() << " " << temp->getFrequency() << std::endl;
-	}
+	noteLibrary->printAll();
 
 	delete noteLibrary;
 	delete middle_c;
