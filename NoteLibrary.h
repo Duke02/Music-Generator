@@ -36,6 +36,8 @@ private:
 public:
 	static NoteLibrary *getInstance ( );
 
+	void initializeLibrary (int num_of_octaves);
+
 	int getSize ( ) const;
 
 	Note *getNote (const std::string &note) const;
