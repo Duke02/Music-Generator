@@ -38,4 +38,17 @@ Note::operator std::string ( ) const {
 	return this->getRepresentation();
 }
 
+Note::Note (const Note &note) {
+	this->frequency = note.getFrequency();
+	this->octave    = note.getOctave();
+	this->name      = note.getName();
+}
+
+Note::Note (const Note *note) {
+
+	this->frequency = note->getFrequency();
+	this->octave    = note->getOctave();
+	this->name      = note->getName();
+}
+
 

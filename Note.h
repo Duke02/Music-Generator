@@ -14,6 +14,7 @@ private:
 public:
 	Note ( );
 	Note (const std::string &name, const int &octave, const double &frequency);
+	Note (const Note &note);
 	~Note ( ) = default;
 
 	const std::string &getName ( ) const;
@@ -24,6 +25,7 @@ public:
 	explicit operator std::string ( ) const;
 
 
+	Note (const Note *note);
 };
 
 
