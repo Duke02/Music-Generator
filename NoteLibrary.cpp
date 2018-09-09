@@ -52,3 +52,9 @@ Note *NoteLibrary::getMiddleC ( ) const {
 int NoteLibrary::getSize ( ) const {
 	return static_cast<int>(this->notes.size());
 }
+
+void NoteLibrary::printAll ( ) const {
+	for ( auto i = this->notes.begin(); i != this->notes.end(); i++ ) {
+		std::cout << i->second->getRepresentation() << " " << i->second->getFrequency() << std::endl;
+	}
+}

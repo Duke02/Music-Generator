@@ -26,6 +26,7 @@ public:
 	void addNote (Note *note);
 	void addNote (const std::string &name, const int &octave, const double &frequency);
 
+	void printAll ( ) const;
 
 };
 
