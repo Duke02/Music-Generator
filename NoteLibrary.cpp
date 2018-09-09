@@ -47,3 +47,7 @@ void NoteLibrary::addNote (const std::string &name, const int &octave, const dou
 const Note *NoteLibrary::getMiddleC ( ) const {
 	return this->getNote( "C3" );
 }
+
+int NoteLibrary::getSize ( ) const {
+	return this->notes.size();
+}

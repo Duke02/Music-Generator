@@ -17,6 +17,8 @@ private:
 public:
 	static NoteLibrary *getInstance ( );
 
+	int getSize ( ) const;
+
 	const Note *getNote (const std::string &note) const;
 	const Note *getMiddleC ( ) const;
 
