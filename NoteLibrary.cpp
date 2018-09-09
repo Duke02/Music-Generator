@@ -43,3 +43,7 @@ void NoteLibrary::addNote (const Note *note) {
 void NoteLibrary::addNote (const std::string &name, const int &octave, const double &frequency) {
 	this->addNote( new Note( name, octave, frequency ) );
 }
+
+const Note *NoteLibrary::getMiddleC ( ) const {
+	return this->getNote( "C3" );
+}
