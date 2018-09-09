@@ -7,10 +7,29 @@
 #include <map>
 #include "Note.h"
 
+struct NoteComparator {
+	bool operator () (const std::string &lhs, const std::string &rhs) const {
+		// Assumes lhs and rhs are something like N#n or Nn where N is the note letter
+		// and n is the octave.
+
+		// Figuring out lesser octave.
+		if ( lhs[ lhs.size() - 1 ] != rhs[ rhs.size() - 1 ] ) {
+			return lhs[ lhs.size() - 1 ] < rhs[ rhs.size() - 1 ];
+		} else if ( lhs[ 0 ] != rhs[ 0 ] ) {
+			// We already know the octaves are the same.
+			// Now we're figuring out if the notes are the same.
+			return lhs < rhs;
+		}
+		// We know the notes are within a half step of each other.
+		// So pick the one who is natural.
+		return lhs.size() < rhs.size();
+	}
+};
+
 class NoteLibrary {
 
 private:
-	std::map < std::string, Note * > notes;
+	std::map < std::string, Note *, NoteComparator > notes;
 
 	NoteLibrary ( );
 
