@@ -20,11 +20,11 @@ NoteLibrary *NoteLibrary::getInstance ( ) {
 	return instance;
 }
 
-Note *NoteLibrary::getNote (const std::string &note) const {
+const Note *NoteLibrary::getNote (const std::string &note) const {
 	// If we can find the given note in the thing...
 	if ( this->notes.find( note ) != this->notes.end() ) {
 		// output the note.
-		return this->notes[ note ];
+		return this->notes.at( note );
 	}
 	// If we can't find it,
 	// then just return null.

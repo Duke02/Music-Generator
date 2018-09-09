@@ -10,14 +10,14 @@
 class NoteLibrary {
 
 private:
-	const Note **notes;
+	std::map < std::string, const Note * > notes;
 
 	NoteLibrary ( );
 
 public:
 	static NoteLibrary *getInstance ( );
 
-	Note *getNote (const std::string &note) const;
+	const Note *getNote (const std::string &note) const;
 
 	void addNote (const Note *note);
 	void addNote (const std::string &name, const int &octave, const double &frequency);
