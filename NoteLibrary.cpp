@@ -58,7 +58,7 @@ int NoteLibrary::getSize ( ) const {
 
 void NoteLibrary::printAll ( ) const {
 	for ( auto i = this->notes.begin(); i != this->notes.end(); i++ ) {
-		std::cout << i->second->getRepresentation() << " " << i->second->getFrequency() << std::endl;
+		std::cout << i->second->getInfo() << std::endl;
 	}
 }
 
