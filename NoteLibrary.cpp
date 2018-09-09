@@ -122,3 +122,9 @@ void NoteLibrary::initializeLibrary (int num_of_octaves) {
 		this->addNote( note_name, octave, frequency );
 	}
 }
+
+NoteLibrary::~NoteLibrary ( ) {
+	for ( int i = 0; i < this->getSize(); i++ ) {
+		delete this->getNote( getNoteRepresentation( i ) );
+	}
+}

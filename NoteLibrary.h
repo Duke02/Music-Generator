@@ -35,6 +35,8 @@ private:
 
 public:
 	static NoteLibrary *getInstance ( );
+	~NoteLibrary ( );
+
 
 	void initializeLibrary (int num_of_octaves);
 
