@@ -50,5 +50,5 @@ Note *NoteLibrary::getMiddleC ( ) const {
 }
 
 int NoteLibrary::getSize ( ) const {
-	return this->notes.size();
+	return static_cast<int>(this->notes.size());
 }
