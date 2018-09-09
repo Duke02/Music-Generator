@@ -24,6 +24,8 @@ public:
 	std::string getRepresentation ( ) const;
 	explicit operator std::string ( ) const;
 
+	std::string getInfo ( ) const;
+
 
 	Note (const Note *note);
 };

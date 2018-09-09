@@ -51,4 +51,7 @@ Note::Note (const Note *note) {
 	this->name      = note->getName();
 }
 
+std::string Note::getInfo ( ) const {
+	return this->getRepresentation() + " " + std::to_string( this->getFrequency() ) + "Hz";
+}
 
