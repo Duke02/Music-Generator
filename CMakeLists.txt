@@ -3,4 +3,4 @@ project ( MusicGenerator )
 
 set ( CMAKE_CXX_STANDARD 14 )
 
-add_executable ( MusicGenerator main.cpp )
+add_executable ( MusicGenerator main.cpp Note.cpp Note.h )
